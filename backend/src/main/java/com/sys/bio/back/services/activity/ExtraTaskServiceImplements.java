@@ -56,5 +56,8 @@ public class ExtraTaskServiceImplements implements ExtraTaskService {
         }
     }
 
+    @Override
+    public void saveAll(List<ExtraTask> extraTasks) { taskRepo.saveAll(extraTasks); }
+
 
 }

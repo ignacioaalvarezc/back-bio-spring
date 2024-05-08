@@ -15,22 +15,20 @@ public abstract class Reception_ {
 	public static volatile SingularAttribute<Reception, Date> date;
 	public static volatile SingularAttribute<Reception, LocalDate> filterDate;
 	public static volatile SingularAttribute<Reception, Integer> acceptedBales;
+	public static volatile SingularAttribute<Reception, LocalTime> hour;
 	public static volatile SingularAttribute<Reception, String> reasonRejected;
-	public static volatile SingularAttribute<Reception, Double> totalHours;
+	public static volatile SingularAttribute<Reception, Integer> totalMinutes;
 	public static volatile SingularAttribute<Reception, Responsible> responsible;
-	public static volatile SingularAttribute<Reception, LocalTime> startTime;
-	public static volatile SingularAttribute<Reception, LocalTime> endTime;
 	public static volatile SingularAttribute<Reception, Long> receptionId;
 	public static volatile SingularAttribute<Reception, Integer> rejectedBales;
 
 	public static final String DATE = "date";
 	public static final String FILTER_DATE = "filterDate";
 	public static final String ACCEPTED_BALES = "acceptedBales";
+	public static final String HOUR = "hour";
 	public static final String REASON_REJECTED = "reasonRejected";
-	public static final String TOTAL_HOURS = "totalHours";
+	public static final String TOTAL_MINUTES = "totalMinutes";
 	public static final String RESPONSIBLE = "responsible";
-	public static final String START_TIME = "startTime";
-	public static final String END_TIME = "endTime";
 	public static final String RECEPTION_ID = "receptionId";
 	public static final String REJECTED_BALES = "rejectedBales";
 

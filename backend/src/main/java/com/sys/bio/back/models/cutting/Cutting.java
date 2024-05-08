@@ -30,22 +30,23 @@ public class Cutting {
     @ManyToOne(fetch = FetchType.EAGER)
     private Responsible responsible;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonProperty("extraTask")
-    private ExtraTask extraTask;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
     private Double totalWeight;
 
     private Integer totalAmount;
+    /*
 
     private LocalTime startTime;
 
     private LocalTime endTime;
 
     private Double totalHours;
+     */
+
+    private Integer totalHours;
+    private Integer totalMinutes;
 
     private String observations;
 

@@ -118,7 +118,7 @@ public class ReceptionExporterExcel {
             cell.setCellStyle(style);
 
             cell = row.createCell(6);
-            LocalTime hour = reception.getEndTime();
+            LocalTime hour = reception.getHour();
             String hourString = (hour != null) ? hour.toString() : "null";
             cell.setCellValue(hourString);
             sheet.autoSizeColumn(6);

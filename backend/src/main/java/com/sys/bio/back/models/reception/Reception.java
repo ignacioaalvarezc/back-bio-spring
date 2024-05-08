@@ -26,9 +26,8 @@ public class Reception {
     private Integer rejectedBales;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
-    private LocalTime startTime;
-    private LocalTime endTime;
-    private Double totalHours;
+    private LocalTime hour;
+    private Integer totalMinutes;
     private String reasonRejected;
     private LocalDate filterDate;
 

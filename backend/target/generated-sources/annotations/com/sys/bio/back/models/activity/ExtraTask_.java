@@ -20,7 +20,6 @@ public abstract class ExtraTask_ {
 	public static volatile SingularAttribute<ExtraTask, Activity> activity;
 	public static volatile SingularAttribute<ExtraTask, LocalTime> startTaskTime;
 	public static volatile SingularAttribute<ExtraTask, Responsible> responsible;
-	public static volatile SingularAttribute<ExtraTask, Boolean> enabled;
 
 	public static final String EXTRA_TASK_ID = "extraTaskId";
 	public static final String DATE = "date";
@@ -30,7 +29,6 @@ public abstract class ExtraTask_ {
 	public static final String ACTIVITY = "activity";
 	public static final String START_TASK_TIME = "startTaskTime";
 	public static final String RESPONSIBLE = "responsible";
-	public static final String ENABLED = "enabled";
 
 }
 

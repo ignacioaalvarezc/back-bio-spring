@@ -78,6 +78,7 @@ public class ReceptionServiceImpl implements ReceptionService {
         return (List<Reception>) receptionRepository.findAll();
     }
 
+    /*
     @Override
     public Map<String, Double> getTotalHoursByResponsibleForCurrentMonth() {
         List<Reception> receptions = receptionRepository.findAll();
@@ -90,4 +91,5 @@ public class ReceptionServiceImpl implements ReceptionService {
         }
         return totalHoursByResponsible;
     }
+     */
 }

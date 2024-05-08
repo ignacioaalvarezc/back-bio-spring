@@ -2,6 +2,7 @@ package com.sys.bio.back.controllers.activity;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.activity.ExtraTask;
+import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.services.activity.ExtraTaskService;
 import com.sys.bio.back.services.cutting.CuttingService;
@@ -74,5 +75,20 @@ public class ExtraTaskController {
             @RequestParam(value = "name", required = false) String name) {
         List<ExtraTask> extraTasks = taskService.searchByResponsibleName(name);
         return new ResponseEntity<>(extraTasks, HttpStatus.OK);
+    }
+
+    @PostMapping("/saveAllExtraTasks")
+    public ResponseEntity<?> saveAllExtraTasks(@RequestBody List<ExtraTask> extraTasks) {
+        try {
+            taskService.saveAll(extraTasks);
+            return ResponseEntity.ok("Extra tasks has saved successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error saving extra tasks: " + e.getMessage());
+        }
+    }
+
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ResponseEntity<?> handleHttpMessageNotReadableException(org.springframework.http.converter.HttpMessageNotReadableException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid JSON format: " + ex.getMessage());
     }
 }

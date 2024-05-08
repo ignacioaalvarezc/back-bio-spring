@@ -20,7 +20,7 @@ public interface CutBoxService {
     List<CutBox> searchByCutTypeName(String name);
 
 
-    void saveAll(List<CutBox> cleaningTools);
+    void saveAll(List<CutBox> cutBoxes);
 
     Integer getTotalAmountForMiniCuts();
 

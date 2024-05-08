@@ -190,10 +190,11 @@ public class ReceptionController {
         List<Reception> receptions = receptionService.getReceptionsByDateRange(startDate, endDate);
         return ResponseEntity.ok(receptions);
     }
-
+/*
     @GetMapping("/totalHoursForMonth")
     public ResponseEntity<Map<String, Double>> getReceptionsAndTotalHoursByResponsibleForCurrentMonth() {
         Map<String, Double> totalHoursByResponsible = receptionService.getTotalHoursByResponsibleForCurrentMonth();
         return ResponseEntity.ok(totalHoursByResponsible);
     }
+ */
 }

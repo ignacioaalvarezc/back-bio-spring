@@ -53,7 +53,6 @@ public class ReceptionExporterPDF {
 
         cell.setPhrase((new Phrase("Hora", font)));
         table.addCell(cell);
-
     }
 
     private void writeTableData(PdfPTable table) {
@@ -83,7 +82,7 @@ public class ReceptionExporterPDF {
             String dateString = (date != null) ? formatDate(date) : "null";
             table.addCell(dateString);
 
-            LocalTime hour = reception.getEndTime();
+            LocalTime hour = reception.getHour();
             String hourString = (hour != null) ? hour.toString() : "null";
             table.addCell(hourString);
         }

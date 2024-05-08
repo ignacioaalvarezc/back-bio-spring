@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -28,7 +29,7 @@ public class ExtraTask {
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonProperty("responsible")
     private Responsible responsible;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JsonProperty("activity")
     private Activity activity;
 
@@ -37,5 +38,4 @@ public class ExtraTask {
     private LocalTime startTaskTime;
     private LocalTime endTaskTime;
     private Double totalTaskHours;
-    private Boolean enabled;
 }

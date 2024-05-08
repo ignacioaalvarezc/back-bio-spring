@@ -16,4 +16,6 @@ public interface ExtraTaskService {
     void deleteExtraTask(Long extraTaskId);
     List<ExtraTask> getExtraTasksByDateRange(Date startDate, Date endDate);
     List<ExtraTask> searchByResponsibleName(String name);
+
+    void saveAll(List<ExtraTask> extraTasks);
 }
