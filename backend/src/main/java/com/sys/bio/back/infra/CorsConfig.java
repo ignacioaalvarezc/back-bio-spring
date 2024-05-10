@@ -16,7 +16,7 @@ public class CorsConfig {
         config.setAllowCredentials(true);
         //config.addAllowedOrigin("http://localhost:4200");
         config.addAllowedOrigin("http://vps-4088220-x.dattaweb.com");
-        config.addAllowedOrigin("http://localhost://149.50.140.114");
+        config.addAllowedOrigin("http://149.50.140.114");
         config.addAllowedOrigin("https://softbio.cl");
         //config.addAllowedOrigin("http://18.119.134.114");
         config.addAllowedHeader("*");
