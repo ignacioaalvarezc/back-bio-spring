@@ -5,19 +5,19 @@ services:
   app_bio:
     build: backend
     environment:
-      DB_URL: jdbc:mysql://back-bio:3306/spring-courses?createDatabaseIfNoEx>
+      DB_URL: jdbc:mysql://back-bio:3306/spring-courses
       DB_USER_NAME: root
       DB_PASSWORD: nacho
     restart: always
     ports:
       - "8080:8080"
     depends_on:
-      - back-bio  # Nombre del servicio como cadena
+      - back-bio
 
   back-bio:
     image: mysql:8.0.33
     ports:
-      - "3307:3306"
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: nacho
       MYSQL_PASSWORD: nacho
