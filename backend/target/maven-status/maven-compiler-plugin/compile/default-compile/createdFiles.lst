@@ -142,7 +142,6 @@ com\sys\bio\back\controllers\order\OrderProductController.class
 com\sys\bio\back\infra\security\JwtToken\JwtAuthenticationFilter.class
 com\sys\bio\back\services\packaging\BoxTypeService.class
 com\sys\bio\back\infra\exceptions\UserDisabledException.class
-com\sys\bio\back\infra\security\SecurityConfig.class
 com\sys\bio\back\models\message\FileMessage.class
 com\sys\bio\back\models\user\Responsible_.class
 com\sys\bio\back\models\sized\StrawType_.class
