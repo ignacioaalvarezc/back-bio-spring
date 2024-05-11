@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "https://softbio.cl")
 public class AuthenticationController {
 
     @Autowired
