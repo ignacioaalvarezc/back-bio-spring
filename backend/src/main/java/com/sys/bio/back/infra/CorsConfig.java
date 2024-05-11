@@ -15,6 +15,8 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://softbio.cl/");
+        config.addAllowedOrigin("https://softbio.cl");
+        config.addAllowedOrigin("https://www.softbio.cl");
         config.addAllowedOrigin("https://backsoftbio.cl");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
