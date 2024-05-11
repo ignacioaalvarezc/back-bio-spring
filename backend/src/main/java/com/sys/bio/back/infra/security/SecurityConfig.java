@@ -61,7 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
                 .and()
                 .authorizeRequests()
-                .antMatchers("backsoftbio.cl", "/generate-token", "/users/", "/current-user",
+                .antMatchers("https://backsoftbio.cl/generate-token", "https://backsoftbio.cl/current-user", "/generate-token", "/users/", "/current-user",
                         "/save-admin").permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
