@@ -1,5 +1,4 @@
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\user\Authority.java
-C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\CorsConfig.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\UserService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\process\sizing\SizedBasketServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SizedCriteria.java
@@ -24,6 +23,7 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\PackageService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\order\OrderProduct.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\UserDetailsServiceImpl.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\cors\CorsConfig.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\controllers\item\CleaningToolController.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\security\JwtToken\JwtResponse.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\utils\report\pdf\UserExporterPDF.java

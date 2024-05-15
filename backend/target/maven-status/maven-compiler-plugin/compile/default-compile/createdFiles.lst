@@ -99,7 +99,6 @@ com\sys\bio\back\utils\date\DateUtils.class
 com\sys\bio\back\models\user\UserRole_.class
 com\sys\bio\back\models\sanitized\Sanitized.class
 com\sys\bio\back\models\cutting\CutType_.class
-com\sys\bio\back\infra\CorsConfig.class
 com\sys\bio\back\models\cutting\CutBox_.class
 com\sys\bio\back\models\cutting\CutBox.class
 com\sys\bio\back\models\user\Authority.class
@@ -144,6 +143,7 @@ com\sys\bio\back\services\packaging\BoxTypeService.class
 com\sys\bio\back\infra\exceptions\UserDisabledException.class
 com\sys\bio\back\infra\security\SecurityConfig.class
 com\sys\bio\back\models\message\FileMessage.class
+com\sys\bio\back\infra\cors\CorsConfig.class
 com\sys\bio\back\models\user\Responsible_.class
 com\sys\bio\back\models\sized\StrawType_.class
 com\sys\bio\back\services\cutting\CutBoxCriteriaService.class
