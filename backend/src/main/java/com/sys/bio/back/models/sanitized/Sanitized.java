@@ -32,17 +32,12 @@ public class Sanitized {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
-    private LocalTime startTime;
-
-    private LocalTime endTime;
-
-    private Double totalHours;
+    private Integer totalHours;
 
     private String observations;
 
     @OneToMany(mappedBy = "sanitized", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<SanitizedBox> sanitizedBoxes = new LinkedHashSet<>();
-
 
 }

@@ -46,9 +46,6 @@ public class SizedExporterPDF {
         cell.setPhrase((new Phrase("Cantidad", font)));
         table.addCell(cell);
 
-        cell.setPhrase((new Phrase("Observaciones", font)));
-        table.addCell(cell);
-
         cell.setPhrase((new Phrase("Fecha", font)));
         table.addCell(cell);
 
@@ -71,7 +68,7 @@ public class SizedExporterPDF {
             String strawName = (strawType != null) ? strawType.getName() : "null";
             table.addCell(strawName);
 
-            Double accepted = sizedBox.getWeight();
+            Integer accepted = sizedBox.getWeight();
             String acceptedString = (accepted != null) ? accepted.toString() : "null";
             table.addCell(acceptedString);
 
@@ -79,9 +76,6 @@ public class SizedExporterPDF {
             String amountString = (amount != null) ? amount.toString() : "null";
             table.addCell(amountString);
 
-            String observations = sizedBox.getObservations();
-            String observationString = (observations != null) ? observations : "null";
-            table.addCell(observationString);
 
             Date date = sizedBox.getDate();
             String dateString = (date != null) ? formatDate(date) : "null";

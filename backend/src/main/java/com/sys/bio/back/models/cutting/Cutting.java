@@ -32,21 +32,10 @@ public class Cutting {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
-
-    private Double totalWeight;
-
+    private Integer totalWeight;
     private Integer totalAmount;
-    /*
-
-    private LocalTime startTime;
-
-    private LocalTime endTime;
-
-    private Double totalHours;
-     */
 
     private Integer totalHours;
-    private Integer totalMinutes;
 
     private String observations;
 

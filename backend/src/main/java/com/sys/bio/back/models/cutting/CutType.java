@@ -8,10 +8,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Table(name = "cutTypes")
+@AllArgsConstructor @NoArgsConstructor
+@Entity @Table(name = "cutTypes")
 public class CutType {
 
     @Id
@@ -19,11 +17,8 @@ public class CutType {
     private Long cutTypeId;
 
     private String name;
-
     private Double factor;
-
     private String description;
-
     private Boolean enabled;
 
     @OneToMany(mappedBy = "cutType", cascade = CascadeType.ALL)

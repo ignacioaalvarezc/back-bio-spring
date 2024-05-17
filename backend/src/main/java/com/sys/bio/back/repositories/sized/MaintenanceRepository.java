@@ -8,6 +8,6 @@ import java.util.Date;
 import java.util.List;
 
 public interface MaintenanceRepository extends JpaRepository<Maintenance, Long> {
-    List<Maintenance> findByDateBetween(Date startDate, Date endDate);
+    List<Maintenance> findByDateAlertBetween(Date startDate, Date endDate);
 
 }

@@ -60,10 +60,6 @@ public class SizedExporterExcel {
         cell.setCellValue("Cantidad");
         cell.setCellStyle(style);
 
-        cell = file.createCell(4);
-        cell.setCellValue("Observaciones");
-        cell.setCellStyle(style);
-
         cell = file.createCell(5);
         cell.setCellValue("Fecha");
         cell.setCellStyle(style);
@@ -112,12 +108,6 @@ public class SizedExporterExcel {
             String amount = (sizedBox.getAmount() != null) ? sizedBox.getAmount().toString() : "null";
             cell.setCellValue(amount);
             sheet.autoSizeColumn(3);
-            cell.setCellStyle(style);
-
-            cell = row.createCell(4);
-            String observations = (sizedBox.getObservations() != null) ? sizedBox.getObservations() : "null";
-            cell.setCellValue(observations);
-            sheet.autoSizeColumn(4);
             cell.setCellStyle(style);
 
             cell = row.createCell(5);

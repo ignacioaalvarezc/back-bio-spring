@@ -1,5 +1,7 @@
 package com.sys.bio.back.models.sized;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.models.user.Responsible;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,16 +23,20 @@ public class SizedBox {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sizedBoxId;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private Responsible responsible;
     @ManyToOne(fetch = FetchType.EAGER)
     private StrawType strawType;
-    private Integer number;
-    private Double weight;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JsonProperty("sizing")
+    private Sizing sizing;
+
+    private Integer numberBox;
+    private Integer weight;
     private Integer amount;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
-    private LocalTime hour;
-    private String observations;
     private LocalDate filterDate;
+    private LocalTime hour;
 }

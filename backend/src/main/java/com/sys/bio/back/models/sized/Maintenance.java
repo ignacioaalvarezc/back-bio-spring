@@ -3,6 +3,7 @@ package com.sys.bio.back.models.sized;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,8 +20,10 @@ public class Maintenance {
 
     @Id
     private Long maintenanceId;
-    private Date date;
-    private LocalTime hour;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dateAlert;
+    private LocalTime hourAlert;
     private String reason;
     private String state;
     private String operator;

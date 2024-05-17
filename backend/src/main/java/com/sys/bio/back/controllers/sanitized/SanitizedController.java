@@ -1,13 +1,8 @@
 package com.sys.bio.back.controllers.sanitized;
 
-import com.lowagie.text.DocumentException;
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.models.sanitized.Sanitized;
-import com.sys.bio.back.services.process.reception.ReceptionCriteriaService;
 import com.sys.bio.back.services.sanitized.SanitizedService;
-import com.sys.bio.back.utils.report.excel.ReceptionExporterExcel;
-import com.sys.bio.back.utils.report.pdf.ReceptionExporterPDF;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
