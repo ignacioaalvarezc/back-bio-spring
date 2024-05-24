@@ -22,6 +22,7 @@ services:
       MYSQL_DATABASE: bio-db
     volumes:
       - db_data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/my.cnf
     restart: always
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]

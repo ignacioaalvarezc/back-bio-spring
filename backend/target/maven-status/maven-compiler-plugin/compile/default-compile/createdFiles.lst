@@ -155,6 +155,7 @@ com\sys\bio\back\infra\exceptions\UserDisabledException.class
 com\sys\bio\back\infra\security\SecurityConfig.class
 com\sys\bio\back\services\item\CategoryService.class
 com\sys\bio\back\models\message\FileMessage.class
+com\sys\bio\back\infra\cors\CorsConfig.class
 com\sys\bio\back\models\packaging\Provider.class
 com\sys\bio\back\controllers\item\InventoryController.class
 com\sys\bio\back\models\user\Responsible_.class
