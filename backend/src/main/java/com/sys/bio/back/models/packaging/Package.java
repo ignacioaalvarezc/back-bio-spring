@@ -30,8 +30,11 @@ public class Package {
     private Packaging packaging;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonProperty("boxType")
-    private BoxType boxType;
+    private Provider provider;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private BoxName boxName;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private BoxFormat boxFormat;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonProperty("responsible")
@@ -48,9 +51,5 @@ public class Package {
     private Integer boxAmount;
 
     private Integer strawAmount;
-
-    private Integer weightRejected;
-
-    private Integer strawRejected;
 
 }

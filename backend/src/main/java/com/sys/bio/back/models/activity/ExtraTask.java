@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Fetch;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -33,9 +34,12 @@ public class ExtraTask {
     @JsonProperty("activity")
     private Activity activity;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private LocalDate filterDate;
+
     private LocalTime startTaskTime;
+
     private LocalTime endTaskTime;
     private Double totalTaskHours;
 }

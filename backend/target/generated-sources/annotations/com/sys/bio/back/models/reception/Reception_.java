@@ -17,8 +17,8 @@ public abstract class Reception_ {
 	public static volatile SingularAttribute<Reception, Integer> acceptedBales;
 	public static volatile SingularAttribute<Reception, LocalTime> hour;
 	public static volatile SingularAttribute<Reception, String> reasonRejected;
-	public static volatile SingularAttribute<Reception, Integer> totalMinutes;
 	public static volatile SingularAttribute<Reception, Responsible> responsible;
+	public static volatile SingularAttribute<Reception, Double> rejectedPercentage;
 	public static volatile SingularAttribute<Reception, Long> receptionId;
 	public static volatile SingularAttribute<Reception, Integer> rejectedBales;
 
@@ -27,8 +27,8 @@ public abstract class Reception_ {
 	public static final String ACCEPTED_BALES = "acceptedBales";
 	public static final String HOUR = "hour";
 	public static final String REASON_REJECTED = "reasonRejected";
-	public static final String TOTAL_MINUTES = "totalMinutes";
 	public static final String RESPONSIBLE = "responsible";
+	public static final String REJECTED_PERCENTAGE = "rejectedPercentage";
 	public static final String RECEPTION_ID = "receptionId";
 	public static final String REJECTED_BALES = "rejectedBales";
 

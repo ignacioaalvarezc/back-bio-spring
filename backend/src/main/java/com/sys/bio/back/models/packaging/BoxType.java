@@ -3,6 +3,7 @@ package com.sys.bio.back.models.packaging;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sys.bio.back.models.order.Order;
 import com.sys.bio.back.models.packaging.Packaging;
+import com.sys.bio.back.models.sized.StrawType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,18 +23,10 @@ public class BoxType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long boxTypeId;
-    private String name;
-    private String provider;
-    private String format;
-    private Integer strawAmount;
+
     private String description;
-    private Boolean enabled;
-    @OneToMany(mappedBy = "boxType", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Set<Package> packages = new LinkedHashSet<>();
     @OneToMany(mappedBy = "boxType", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Order> orders = new LinkedHashSet<>();
-
 
 }

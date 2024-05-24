@@ -1,5 +1,7 @@
 package com.sys.bio.back.models.packaging;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.user.Responsible;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +11,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -26,5 +30,12 @@ public class Packaging {
     private LocalTime startTime;
     private LocalTime endTime;
     private Double totalHours;
+    private Integer totalBox;
+    private Integer totalAmount;
+    private Integer weightRejected;
+    private Integer strawRejected;
 
+    @OneToMany(mappedBy = "packaging", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Package> packages = new LinkedHashSet<>();
 }

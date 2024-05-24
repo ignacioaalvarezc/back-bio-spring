@@ -27,8 +27,8 @@ public class Reception {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private LocalTime hour;
-    private Integer totalMinutes;
     private String reasonRejected;
+    private Double rejectedPercentage;
     private LocalDate filterDate;
 
 }
