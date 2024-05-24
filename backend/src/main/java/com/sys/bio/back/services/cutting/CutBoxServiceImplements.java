@@ -112,7 +112,7 @@ public class CutBoxServiceImplements implements CutBoxService {
 
     public Integer getTotalAmountByCutType(String name) {
         Query query = entityManager.createQuery(
-                "SELECT SUM(c.amount) FROM CleaningTool c WHERE c.cutType.name = :name");
+                "SELECT SUM(c.amount) FROM Item c WHERE c.cutType.name = :name");
         query.setParameter("name", name);
         return (Integer) query.getSingleResult();
     }

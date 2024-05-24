@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sys.bio.back.models.activity.ExtraTask;
 import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.cutting.Cutting;
+import com.sys.bio.back.models.packaging.Packaging;
 import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.models.sized.SizedBox;
 import com.sys.bio.back.models.sized.Sizing;
@@ -49,5 +50,9 @@ public class Responsible {
     @OneToMany(mappedBy = "responsible", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Sizing> sizings = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "responsible", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Packaging> packagings = new LinkedHashSet<>();
 
 }

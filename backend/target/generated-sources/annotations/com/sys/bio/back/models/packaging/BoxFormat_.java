@@ -9,12 +9,14 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(BoxFormat.class)
 public abstract class BoxFormat_ {
 
+	public static volatile SingularAttribute<BoxFormat, Integer> amount;
 	public static volatile SingularAttribute<BoxFormat, String> name;
 	public static volatile SingularAttribute<BoxFormat, Long> boxFormatId;
 	public static volatile SingularAttribute<BoxFormat, BoxName> boxName;
 	public static volatile SetAttribute<BoxFormat, Package> packages;
 	public static volatile SingularAttribute<BoxFormat, Boolean> enabled;
 
+	public static final String AMOUNT = "amount";
 	public static final String NAME = "name";
 	public static final String BOX_FORMAT_ID = "boxFormatId";
 	public static final String BOX_NAME = "boxName";

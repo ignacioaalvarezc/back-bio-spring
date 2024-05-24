@@ -3,6 +3,7 @@ package com.sys.bio.back.models.user;
 import com.sys.bio.back.models.activity.ExtraTask;
 import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.cutting.Cutting;
+import com.sys.bio.back.models.packaging.Packaging;
 import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.models.sized.SizedBox;
 import com.sys.bio.back.models.sized.Sizing;
@@ -16,6 +17,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Responsible_ {
 
 	public static volatile SetAttribute<Responsible, Cutting> cuttings;
+	public static volatile SetAttribute<Responsible, Packaging> packagings;
 	public static volatile SetAttribute<Responsible, CutBox> cutBoxes;
 	public static volatile SetAttribute<Responsible, Reception> receptions;
 	public static volatile SetAttribute<Responsible, Sizing> sizings;
@@ -27,6 +29,7 @@ public abstract class Responsible_ {
 	public static volatile SetAttribute<Responsible, ExtraTask> extraTasks;
 
 	public static final String CUTTINGS = "cuttings";
+	public static final String PACKAGINGS = "packagings";
 	public static final String CUT_BOXES = "cutBoxes";
 	public static final String RECEPTIONS = "receptions";
 	public static final String SIZINGS = "sizings";

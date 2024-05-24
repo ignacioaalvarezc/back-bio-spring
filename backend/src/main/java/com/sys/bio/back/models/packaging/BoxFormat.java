@@ -20,6 +20,7 @@ public class BoxFormat {
     private Long boxFormatId;
 
     private String name;
+    private Integer amount;
     private Boolean enabled;
 
     @ManyToOne(fetch = FetchType.EAGER)
