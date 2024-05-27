@@ -15,11 +15,11 @@
       <jdbc-url>jdbc:mysql://localhost:3306/testbio</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="bio-db@149.50.140.52" uuid="c982adb6-094a-40ee-a7a7-671d62bec5d0">
+    <data-source source="LOCAL" name="bio-db@backsoftbio.cl" uuid="c982adb6-094a-40ee-a7a7-671d62bec5d0">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://149.50.140.52:3306/bio-db</jdbc-url>
+      <jdbc-url>jdbc:mysql://backsoftbio.cl:3306/bio-db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

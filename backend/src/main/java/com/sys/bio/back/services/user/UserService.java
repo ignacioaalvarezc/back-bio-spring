@@ -23,6 +23,8 @@ public interface UserService {
 
     boolean isUsernameUnique(String username);
 
+    public long getTotalUsers();
+
     /*
     void uploadProfilePicture(Long userId, MultipartFile photo) throws IOException;
     byte[] getProfilePicture(Long userId);

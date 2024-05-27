@@ -3,6 +3,7 @@ package com.sys.bio.back.controllers.reception;
 import com.lowagie.text.DocumentException;
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.criteria.ReceptionCriteria;
+import com.sys.bio.back.models.dto.OperatorTotalBalesDTO;
 import com.sys.bio.back.models.dto.SearchReceptionDTO;
 import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.services.reception.ReceptionCriteriaService;
@@ -26,6 +27,8 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -175,6 +178,7 @@ public class ReceptionController {
         return receptionCriteria;
     }
 
+
     @GetMapping("/monthly")
     public ResponseEntity<List<Reception>> getReceptionsByMonth() {
         // GET THE FIRST AND LAST DAY OF CURRENT MONTH
@@ -195,4 +199,19 @@ public class ReceptionController {
         return ResponseEntity.ok(totalHoursByResponsible);
     }
  */
+
+
+    @GetMapping("/receptions-summary")
+    public ResponseEntity<List<OperatorTotalBalesDTO>> getBalesSummary() {
+        LocalDate endDate = LocalDate.now();
+        LocalDate startDate = endDate.minusMonths(1);
+
+// Convertir LocalDate a Date
+        Date start = Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        Date end = Date.from(endDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+// Llamar al servicio con las fechas convertidas
+        List<OperatorTotalBalesDTO> balesSummary = receptionService.getBalesByResponsibleLastMonth(start, end);
+        return ResponseEntity.ok(balesSummary);
+    }
 }

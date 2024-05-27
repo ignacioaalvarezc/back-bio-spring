@@ -128,6 +128,10 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public long getTotalUsers() {
+        return userRepository.count();
+    }
+
     @Override
     public boolean isUsernameUnique(String username) {
         return !userRepository.existsByUsername(username);

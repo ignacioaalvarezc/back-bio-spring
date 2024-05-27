@@ -1,6 +1,7 @@
 package com.sys.bio.back.services.reception;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
+import com.sys.bio.back.models.dto.OperatorTotalBalesDTO;
 import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.repositories.reception.ReceptionRepository;
 import com.sys.bio.back.repositories.user.ResponsibleRepository;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 
 @Service
@@ -77,6 +79,9 @@ public class ReceptionServiceImpl implements ReceptionService {
         return (List<Reception>) receptionRepository.findAll();
     }
 
+
+
+
     /*
     @Override
     public Map<String, Double> getTotalHoursByResponsibleForCurrentMonth() {
@@ -91,4 +96,15 @@ public class ReceptionServiceImpl implements ReceptionService {
         return totalHoursByResponsible;
     }
      */
+
+    public List<OperatorTotalBalesDTO> getBalesByResponsibleLastMonth(Date start, Date end) {
+        LocalDate endDate = LocalDate.now();
+        LocalDate startDate = endDate.minusMonths(1);
+
+        // Convertir LocalDate a Date
+        start = Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        end = Date.from(endDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+        return receptionRepository.findBalesByResponsibleLastMonth(start, end);
+    }
 }

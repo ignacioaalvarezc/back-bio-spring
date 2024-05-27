@@ -35,28 +35,9 @@ public class ExtraTaskController {
 
     @PostMapping("/")
     public ResponseEntity<ExtraTask> saveExtraTask(@RequestBody ExtraTask extraTask) {
-        log.info("startTaskTime recibido: {}", extraTask.getStartTaskTime());
-        log.info("endTaskTime recibido: {}", extraTask.getEndTaskTime());
-
-        double totalHours = calculateTotalTaskHours(extraTask.getStartTaskTime(), extraTask.getEndTaskTime());
-        extraTask.setTotalTaskHours(totalHours);
         return ResponseEntity.ok(taskService.addExtraTask(extraTask));
     }
 
-    private double calculateTotalTaskHours(LocalTime startTaskTime, LocalTime endTaskTime) {
-        if (startTaskTime == null || endTaskTime == null) {
-            throw new IllegalArgumentException("Los tiempos de inicio y fin deben estar definidos.");
-        }
-
-        if (endTaskTime.isBefore(startTaskTime)) {
-            throw new IllegalArgumentException("La hora de término debe ser después de la hora de inicio.");
-        }
-
-        Duration duration = Duration.between(startTaskTime, endTaskTime);
-        double totalTaskHours = duration.toHours() + (double) duration.toMinutesPart() / 60;
-        log.info("Total de horas de tarea: {}", totalTaskHours);
-        return totalTaskHours;
-    }
 
     @PutMapping("/update/{extraTaskId}")
     public ResponseEntity<ExtraTask> updateExtraTask(@PathVariable("extraTaskId") Long extraTaskId,

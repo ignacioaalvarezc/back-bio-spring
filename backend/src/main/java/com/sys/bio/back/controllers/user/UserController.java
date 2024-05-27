@@ -121,6 +121,11 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+    @GetMapping("/count-users")
+    public long getTotalUsers() {
+        return userService.getTotalUsers();
+    }
+
     /*
     @GetMapping("/validate-username")
     public ResponseEntity<?> validateUsername(@RequestBody String username) {
