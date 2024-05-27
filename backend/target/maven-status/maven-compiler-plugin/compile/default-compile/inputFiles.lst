@@ -64,6 +64,7 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\controllers\cutting\CutTypeController.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\BoxNameServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\sanitized\SanitizedRepository.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\OperatorTotalBalesDTO.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\UserServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\cutting\CutTypeServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\reception\ReceptionService.java
