@@ -13,11 +13,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
-public class SizedCriteria {
+public class SizedBoxCriteria {
 
     private StringFilter responsible;
     private StringFilter strawType;
-    private DoubleFilter weight;
+    private IntegerFilter weight;
     private IntegerFilter amount;
     private LocalDateFilter filterDate;
 }

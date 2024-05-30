@@ -15,40 +15,42 @@ public abstract class SanitizedBox_ {
 
 	public static volatile SingularAttribute<SanitizedBox, Date> date;
 	public static volatile SingularAttribute<SanitizedBox, LocalDate> filterDate;
+	public static volatile SingularAttribute<SanitizedBox, LocalTime> beginSanitizedTime;
+	public static volatile SingularAttribute<SanitizedBox, LocalTime> endDryingTime;
 	public static volatile SingularAttribute<SanitizedBox, Sanitized> sanitized;
+	public static volatile SingularAttribute<SanitizedBox, Integer> dryWeightFinal;
 	public static volatile SingularAttribute<SanitizedBox, StrawType> strawType;
 	public static volatile SingularAttribute<SanitizedBox, Double> hoursBetweenDryingBeginAndEnding;
-	public static volatile SingularAttribute<SanitizedBox, Double> weightAfterDrying;
 	public static volatile SingularAttribute<SanitizedBox, Double> weightGainPercentage;
 	public static volatile SingularAttribute<SanitizedBox, Long> sanitizedBoxId;
-	public static volatile SingularAttribute<SanitizedBox, LocalTime> hourDryingEnd;
-	public static volatile SingularAttribute<SanitizedBox, Double> weightBeforeDrying;
-	public static volatile SingularAttribute<SanitizedBox, Double> wetWeight;
+	public static volatile SingularAttribute<SanitizedBox, Integer> dryWeight;
+	public static volatile SingularAttribute<SanitizedBox, Integer> wetWeight;
+	public static volatile SingularAttribute<SanitizedBox, LocalTime> endSanitizedTime;
 	public static volatile SingularAttribute<SanitizedBox, Integer> numberBox;
+	public static volatile SingularAttribute<SanitizedBox, LocalTime> beginDryingTime;
 	public static volatile SingularAttribute<SanitizedBox, String> observations;
 	public static volatile SingularAttribute<SanitizedBox, Responsible> responsible;
-	public static volatile SingularAttribute<SanitizedBox, LocalTime> hourDryingBegin;
-	public static volatile SingularAttribute<SanitizedBox, Boolean> state;
-	public static volatile SingularAttribute<SanitizedBox, LocalTime> hourSanitized;
+	public static volatile SingularAttribute<SanitizedBox, String> state;
 	public static volatile SingularAttribute<SanitizedBox, Double> waterRetentionPercentage;
 
 	public static final String DATE = "date";
 	public static final String FILTER_DATE = "filterDate";
+	public static final String BEGIN_SANITIZED_TIME = "beginSanitizedTime";
+	public static final String END_DRYING_TIME = "endDryingTime";
 	public static final String SANITIZED = "sanitized";
+	public static final String DRY_WEIGHT_FINAL = "dryWeightFinal";
 	public static final String STRAW_TYPE = "strawType";
 	public static final String HOURS_BETWEEN_DRYING_BEGIN_AND_ENDING = "hoursBetweenDryingBeginAndEnding";
-	public static final String WEIGHT_AFTER_DRYING = "weightAfterDrying";
 	public static final String WEIGHT_GAIN_PERCENTAGE = "weightGainPercentage";
 	public static final String SANITIZED_BOX_ID = "sanitizedBoxId";
-	public static final String HOUR_DRYING_END = "hourDryingEnd";
-	public static final String WEIGHT_BEFORE_DRYING = "weightBeforeDrying";
+	public static final String DRY_WEIGHT = "dryWeight";
 	public static final String WET_WEIGHT = "wetWeight";
+	public static final String END_SANITIZED_TIME = "endSanitizedTime";
 	public static final String NUMBER_BOX = "numberBox";
+	public static final String BEGIN_DRYING_TIME = "beginDryingTime";
 	public static final String OBSERVATIONS = "observations";
 	public static final String RESPONSIBLE = "responsible";
-	public static final String HOUR_DRYING_BEGIN = "hourDryingBegin";
 	public static final String STATE = "state";
-	public static final String HOUR_SANITIZED = "hourSanitized";
 	public static final String WATER_RETENTION_PERCENTAGE = "waterRetentionPercentage";
 
 }

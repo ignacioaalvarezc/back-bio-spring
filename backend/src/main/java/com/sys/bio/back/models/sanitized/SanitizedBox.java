@@ -29,17 +29,22 @@ public class SanitizedBox {
     private Date date;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate filterDate;
-    private LocalTime hourSanitized;
-    private LocalTime hourDryingBegin;
-    private LocalTime hourDryingEnd;
+
+
     private Double hoursBetweenDryingBeginAndEnding;
-    private Double weightBeforeDrying;
-    private Double wetWeight;
-    private Double weightAfterDrying;
+
+    private Integer dryWeight;
+    private LocalTime beginSanitizedTime;
+    private LocalTime endSanitizedTime;
+    private Integer wetWeight;
+    private LocalTime beginDryingTime;
+    private LocalTime endDryingTime;
+    private Integer dryWeightFinal;
+
     private Double weightGainPercentage; //Porcentaje de aumento de peso: Fórmula: ((Peso del producto seco después de ser mojado - Peso del producto seco antes de ser mojado) / Peso del producto seco antes de ser mojado) * 100 || Esta métrica muestra el incremento porcentual del peso del producto después de ser mojado en relación con su peso original.
     private Double waterRetentionPercentage; //Porcentaje de retención de agua: Fórmula: ((Peso del producto seco después de ser mojado - Peso del producto seco antes de ser mojado) / (Peso del producto seco después de ser mojado)) * 100 || Esta métrica indica qué porcentaje del peso del producto después de ser mojado está compuesto por agua.
     private String observations;
-    private Boolean state;
+    private String state;
 
 
     @ManyToOne(fetch = FetchType.EAGER)

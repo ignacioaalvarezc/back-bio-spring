@@ -38,5 +38,4 @@ public class SizedBox {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private LocalDate filterDate;
-    private LocalTime hour;
 }

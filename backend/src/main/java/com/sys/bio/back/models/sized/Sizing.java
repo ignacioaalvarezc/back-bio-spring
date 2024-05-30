@@ -9,6 +9,7 @@ import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -30,6 +31,8 @@ public class Sizing {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
+    private LocalDate filterDate;
+    private LocalTime hour;
     private Integer totalWeight;
     private Integer totalAmount;
     private Integer totalHours;

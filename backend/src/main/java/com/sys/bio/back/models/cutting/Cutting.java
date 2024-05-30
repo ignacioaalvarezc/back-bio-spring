@@ -11,6 +11,7 @@ import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -38,6 +39,8 @@ public class Cutting {
     private Integer totalHours;
 
     private String observations;
+
+    private LocalDate filterDate;
 
     @OneToMany(mappedBy = "cutting", cascade = CascadeType.ALL)
     @JsonIgnore

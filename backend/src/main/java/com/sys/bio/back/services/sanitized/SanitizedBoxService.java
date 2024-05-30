@@ -21,4 +21,6 @@ public interface SanitizedBoxService {
     List<SanitizedBox> getEnabledSanitizedBoxes();
 
     void saveAll(List<SanitizedBox> sanitizedBoxes);
+
+    void updateAll(List<Long> ids, List<SanitizedBox> sanitizedBoxes);
 }

@@ -64,9 +64,6 @@ public class SizedExporterExcel {
         cell.setCellValue("Fecha");
         cell.setCellStyle(style);
 
-        cell = file.createCell(6);
-        cell.setCellValue("Hora");
-        cell.setCellStyle(style);
     }
 
     private void writeTableData() {
@@ -115,13 +112,6 @@ public class SizedExporterExcel {
             String dateString = (date != null) ? formatDate(date) : "null";
             cell.setCellValue(dateString);
             sheet.autoSizeColumn(5);
-            cell.setCellStyle(style);
-
-            cell = row.createCell(6);
-            LocalTime hour = sizedBox.getHour();
-            String hourString = (hour != null) ? hour.toString() : "null";
-            cell.setCellValue(hourString);
-            sheet.autoSizeColumn(6);
             cell.setCellStyle(style);
         }
     }

@@ -9,15 +9,19 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter
 @Setter
-public class SearchSizedDTO {
+public class SearchCuttingDTO {
 
     private String responsible;
-    private String strawType;
-    private Double startWeight;
-    private Double endWeight;
-    private Integer startAmount;
-    private Integer endAmount;
+
+    private Integer startTotalWeight;
+    private Integer endTotalWeight;
+
+    private Integer startTotalAmount;
+    private Integer endTotalAmount;
+
+    private Integer startTotalHours;
+    private Integer endTotalHours;
+
     private LocalDate startDate;
     private LocalDate endDate;
-
 }

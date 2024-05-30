@@ -2,6 +2,7 @@ package com.sys.bio.back.controllers.sanitized;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.sanitized.SanitizedBox;
+import com.sys.bio.back.models.sanitized.UpdateRequest;
 import com.sys.bio.back.services.sanitized.SanitizedBoxService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -107,5 +108,15 @@ public class SanitizedBoxController {
     @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
     public ResponseEntity<?> handleHttpMessageNotReadableException(org.springframework.http.converter.HttpMessageNotReadableException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid JSON format: " + ex.getMessage());
+    }
+
+    @PostMapping("/updateAll")
+    public ResponseEntity<?> updateAllSizedBoxes(@RequestBody UpdateRequest updateRequest) {
+        try {
+            boxService.updateAll(updateRequest.getIds(), updateRequest.getSanitizedBoxes());
+            return ResponseEntity.ok("Sized boxes have been updated successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error updating sized boxes: " + e.getMessage());
+        }
     }
 }

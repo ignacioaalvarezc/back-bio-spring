@@ -60,7 +60,6 @@ public class SizedBoxServiceImplements implements SizedBoxService {
         boxRepo.delete(sizedBox);
     }
 
-
     @Override
     public List<SizedBox> searchByResponsibleName(String name) {
         if (name != null) {
@@ -85,7 +84,6 @@ public class SizedBoxServiceImplements implements SizedBoxService {
     public void saveAll(List<SizedBox> sizedBoxes) {
         boxRepo.saveAll(sizedBoxes);
     }
-
 
 
 }

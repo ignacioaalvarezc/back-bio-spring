@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.*;
 
 @Service
@@ -73,5 +74,32 @@ public class SanitizedBoxServiceImpl implements SanitizedBoxService {
     @Override
     public void saveAll(List<SanitizedBox> sanitizedBoxes) {
         boxRepo.saveAll(sanitizedBoxes);
+    }
+
+    @Override
+    public void updateAll(List<Long> ids, List<SanitizedBox> sanitizedBoxes) {
+        if (ids.size() != sanitizedBoxes.size()) {
+            throw new IllegalArgumentException("The number of IDs must match the number of sized boxes.");
+        }
+
+        for (int i = 0; i < ids.size(); i++) {
+            Long id = ids.get(i);
+            SanitizedBox newSanitizedBoxData = sanitizedBoxes.get(i);
+
+            SanitizedBox existingSanitizedBox = boxRepo.findById(id).orElseThrow(() -> new EntityNotFoundException("SanitizedBox not found with id " + id));
+
+
+            existingSanitizedBox.setWetWeight(newSanitizedBoxData.getWetWeight());
+            existingSanitizedBox.setState(newSanitizedBoxData.getState());
+            existingSanitizedBox.setBeginDryingTime(newSanitizedBoxData.getBeginDryingTime());
+            existingSanitizedBox.setEndSanitizedTime(newSanitizedBoxData.getEndSanitizedTime());
+            existingSanitizedBox.setDryWeightFinal(newSanitizedBoxData.getDryWeightFinal());
+            existingSanitizedBox.setEndDryingTime(newSanitizedBoxData.getEndDryingTime());
+            existingSanitizedBox.setHoursBetweenDryingBeginAndEnding((newSanitizedBoxData.getHoursBetweenDryingBeginAndEnding()));
+
+
+
+            boxRepo.save(existingSanitizedBox);
+        }
     }
 }

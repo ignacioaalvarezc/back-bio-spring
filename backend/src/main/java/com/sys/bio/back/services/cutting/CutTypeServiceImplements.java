@@ -20,6 +20,7 @@ public class CutTypeServiceImplements implements CutTypeService {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationController.class);
     @Override
     public CutType addCutType(CutType cutType) {
+        cutType.setEnabled(true);
         return typeRepo.save(cutType);
     }
     @Override

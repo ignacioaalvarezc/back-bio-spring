@@ -32,8 +32,6 @@ public class Packaging {
     private Double totalHours;
     private Integer totalBox;
     private Integer totalAmount;
-    private Integer weightRejected;
-    private Integer strawRejected;
 
     @OneToMany(mappedBy = "packaging", cascade = CascadeType.ALL)
     @JsonIgnore

@@ -20,8 +20,6 @@ public abstract class Packaging_ {
 	public static volatile SingularAttribute<Packaging, LocalTime> startTime;
 	public static volatile SingularAttribute<Packaging, LocalTime> endTime;
 	public static volatile SetAttribute<Packaging, Package> packages;
-	public static volatile SingularAttribute<Packaging, Integer> weightRejected;
-	public static volatile SingularAttribute<Packaging, Integer> strawRejected;
 	public static volatile SingularAttribute<Packaging, Long> packagingId;
 
 	public static final String DATE = "date";
@@ -32,8 +30,6 @@ public abstract class Packaging_ {
 	public static final String START_TIME = "startTime";
 	public static final String END_TIME = "endTime";
 	public static final String PACKAGES = "packages";
-	public static final String WEIGHT_REJECTED = "weightRejected";
-	public static final String STRAW_REJECTED = "strawRejected";
 	public static final String PACKAGING_ID = "packagingId";
 
 }

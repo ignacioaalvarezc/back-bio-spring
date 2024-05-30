@@ -2,7 +2,6 @@ package com.sys.bio.back.models.sized;
 
 import com.sys.bio.back.models.user.Responsible;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Date;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
@@ -16,7 +15,6 @@ public abstract class SizedBox_ {
 	public static volatile SingularAttribute<SizedBox, Date> date;
 	public static volatile SingularAttribute<SizedBox, LocalDate> filterDate;
 	public static volatile SingularAttribute<SizedBox, Integer> amount;
-	public static volatile SingularAttribute<SizedBox, LocalTime> hour;
 	public static volatile SingularAttribute<SizedBox, Integer> numberBox;
 	public static volatile SingularAttribute<SizedBox, StrawType> strawType;
 	public static volatile SingularAttribute<SizedBox, Responsible> responsible;
@@ -27,7 +25,6 @@ public abstract class SizedBox_ {
 	public static final String DATE = "date";
 	public static final String FILTER_DATE = "filterDate";
 	public static final String AMOUNT = "amount";
-	public static final String HOUR = "hour";
 	public static final String NUMBER_BOX = "numberBox";
 	public static final String STRAW_TYPE = "strawType";
 	public static final String RESPONSIBLE = "responsible";

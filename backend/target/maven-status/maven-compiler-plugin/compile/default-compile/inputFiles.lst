@@ -1,7 +1,8 @@
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SanitatedBoxCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\user\Authority.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\reception\ReceptionServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\UserService.java
-C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SizedCriteria.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SanitatingCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\activity\ActivityService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\activity\Activity.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\security\JwtToken\JwtUtils.java
@@ -13,6 +14,7 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\security\JwtToken\JwtRequest.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\packaging\PackagingRepository.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\order\OrderProductRepository.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\SizedBoxCriteriaService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\exceptions\UserNotFoundException.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\BoxNameService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\user\Role.java
@@ -21,11 +23,13 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\order\OrderService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\SizedBoxService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\packaging\BoxType.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\SearchSizingDTO.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\activity\ExtraTaskServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\item\InventoryServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\order\Order.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\PackageService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\order\OrderProduct.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\SizingCriteriaService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\UserDetailsServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\cors\CorsConfig.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\security\JwtToken\JwtResponse.java
@@ -39,7 +43,8 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\StrawTypeServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\ProviderService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\exceptions\GlobalExceptionHandler.java
-C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\SearchSizedDTO.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\cutting\CuttingCriteriaService.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\PackageCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\order\OrderRepository.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\SizedBoxServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\utils\report\excel\ReceptionExporterExcel.java
@@ -59,6 +64,7 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\utils\report\excel\SizedExporterExcel.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\cutting\CutBoxService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\MaintenanceService.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\SearchCuttingDTO.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\config\AppConfig.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\activity\ActivityServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\controllers\cutting\CutTypeController.java
@@ -90,7 +96,9 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\activity\ExtraTask.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\BoxFormatServiceImpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\security\JwtToken\JwtAuthenticationFilter.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SizingCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\utils\report\pdf\ReceptionExporterPDF.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\SizedBoxCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\item\Category.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\CutBoxCriteria.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\ResponsibleHoursSumDTO.java
@@ -100,10 +108,12 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\utils\report\pdf\CutBoxExporterPDF.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\controllers\sized\SizedBoxController.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\packaging\BoxName.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\sanitized\UpdateRequest.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\user\ResponsibleServiceimpl.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\reception\ReceptionRepository.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\sized\SizedBoxRepository.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\item\CategoryService.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\models\dto\SearchSizedBoxDTO.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sized\SizingService.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\repositories\user\UserRepository.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\infra\errors\JwtAuthenticationEntryPoint.java
@@ -156,3 +166,4 @@ C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\b
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\controllers\user\UserController.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\sanitized\SanitizedServiceImplements.java
 C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\services\packaging\PackagingService.java
+C:\Users\nacho\Proyectos\Biombillas\bio-back\backend\src\main\java\com\sys\bio\back\criteria\CuttingCriteria.java

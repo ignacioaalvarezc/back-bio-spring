@@ -49,8 +49,6 @@ public class SizedExporterPDF {
         cell.setPhrase((new Phrase("Fecha", font)));
         table.addCell(cell);
 
-        cell.setPhrase((new Phrase("Hora", font)));
-        table.addCell(cell);
     }
 
     private void writeTableData(PdfPTable table) {
@@ -80,10 +78,6 @@ public class SizedExporterPDF {
             Date date = sizedBox.getDate();
             String dateString = (date != null) ? formatDate(date) : "null";
             table.addCell(dateString);
-
-            LocalTime hour = sizedBox.getHour();
-            String hourString = (hour != null) ? hour.toString() : "null";
-            table.addCell(hourString);
         }
     }
 

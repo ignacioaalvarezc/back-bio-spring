@@ -52,4 +52,8 @@ public class Package {
 
     private Integer strawAmount;
 
+    private Integer weightRejected;
+    private Integer strawRejected;
+    private String reasonRejected;
+
 }
