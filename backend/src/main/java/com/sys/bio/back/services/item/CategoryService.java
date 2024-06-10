@@ -1,7 +1,6 @@
 package com.sys.bio.back.services.item;
 
 import com.sys.bio.back.models.item.Category;
-import com.sys.bio.back.models.item.Inventory;
 
 import java.util.List;
 import java.util.Set;

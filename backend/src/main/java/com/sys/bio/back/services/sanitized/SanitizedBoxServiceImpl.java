@@ -61,14 +61,13 @@ public class SanitizedBoxServiceImpl implements SanitizedBoxService {
         }
     }
 
-
     public List<SanitizedBox> getSanitizedBoxesByDateRange(Date startDate, Date endDate) {
         return boxRepo.findByDateBetween(startDate, endDate);
     }
 
     @Override
-    public List<SanitizedBox> getEnabledSanitizedBoxes() {
-        return boxRepo.findByState(false);
+    public List<SanitizedBox> findByState(String state) {
+        return boxRepo.findByState(state);
     }
 
     @Override
@@ -88,7 +87,6 @@ public class SanitizedBoxServiceImpl implements SanitizedBoxService {
 
             SanitizedBox existingSanitizedBox = boxRepo.findById(id).orElseThrow(() -> new EntityNotFoundException("SanitizedBox not found with id " + id));
 
-
             existingSanitizedBox.setWetWeight(newSanitizedBoxData.getWetWeight());
             existingSanitizedBox.setState(newSanitizedBoxData.getState());
             existingSanitizedBox.setBeginDryingTime(newSanitizedBoxData.getBeginDryingTime());
@@ -96,10 +94,14 @@ public class SanitizedBoxServiceImpl implements SanitizedBoxService {
             existingSanitizedBox.setDryWeightFinal(newSanitizedBoxData.getDryWeightFinal());
             existingSanitizedBox.setEndDryingTime(newSanitizedBoxData.getEndDryingTime());
             existingSanitizedBox.setHoursBetweenDryingBeginAndEnding((newSanitizedBoxData.getHoursBetweenDryingBeginAndEnding()));
-
-
+            existingSanitizedBox.setWeightLossPercentage(newSanitizedBoxData.getWeightLossPercentage());
 
             boxRepo.save(existingSanitizedBox);
         }
+    }
+
+    @Override
+    public List<SanitizedBox> getAllSanitizedBoxesBySanitizedId(Long sanitizedId) {
+        return boxRepo.findBySanitizedSanitizedId(sanitizedId);
     }
 }

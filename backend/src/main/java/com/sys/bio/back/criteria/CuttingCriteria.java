@@ -18,6 +18,6 @@ public class CuttingCriteria {
     private StringFilter responsible;
     private IntegerFilter totalWeight;
     private IntegerFilter totalAmount;
-    private IntegerFilter totalHours;
+    private DoubleFilter totalHours;
     private LocalDateFilter filterDate;
 }

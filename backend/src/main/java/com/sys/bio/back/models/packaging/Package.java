@@ -55,5 +55,6 @@ public class Package {
     private Integer weightRejected;
     private Integer strawRejected;
     private String reasonRejected;
+    private String state;
 
 }

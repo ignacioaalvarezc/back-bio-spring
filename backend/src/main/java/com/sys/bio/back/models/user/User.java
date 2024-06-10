@@ -1,16 +1,13 @@
 package com.sys.bio.back.models.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sys.bio.back.models.user.Authority;
-import com.sys.bio.back.models.user.UserRole;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.sys.bio.back.models.notifications.Notification;
+import lombok.*;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
@@ -34,7 +31,9 @@ public class User implements UserDetails {
     @JsonIgnore
     private Set<UserRole> userRoles = new HashSet<>();
     private String photo;
-
+    
+    public User(Long userId) {
+    }
 
 
     @Override

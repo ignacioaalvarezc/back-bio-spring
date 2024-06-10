@@ -36,11 +36,16 @@ public class Cutting {
     private Integer totalWeight;
     private Integer totalAmount;
 
-    private Integer totalHours;
+    private LocalTime startTime;
+    private LocalTime endTime;
+
+    private Double totalHours;
 
     private String observations;
 
     private LocalDate filterDate;
+
+    private String state;
 
     @OneToMany(mappedBy = "cutting", cascade = CascadeType.ALL)
     @JsonIgnore

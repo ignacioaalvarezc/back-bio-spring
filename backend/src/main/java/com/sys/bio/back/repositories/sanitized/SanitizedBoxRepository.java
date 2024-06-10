@@ -11,5 +11,7 @@ public interface SanitizedBoxRepository extends JpaRepository<SanitizedBox, Long
 
     List<SanitizedBox> findByResponsibleNameContainingIgnoreCase(String name);
 
-    List<SanitizedBox> findByState(Boolean state);
+    List<SanitizedBox> findByState(String state);
+
+    List<SanitizedBox> findBySanitizedSanitizedId(Long sanitizedId);
 }

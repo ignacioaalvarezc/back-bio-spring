@@ -128,13 +128,13 @@ public class CuttingController {
                 }
             }
             if(dto.getStartTotalHours() != null || dto.getEndTotalHours() != null) {
-                IntegerFilter filter = new IntegerFilter();
+                DoubleFilter filter = new DoubleFilter();
                 if(dto.getStartTotalHours() != null) {
-                    filter.setGreaterThanOrEqual(dto.getStartTotalHours());
+                    filter.setGreaterThanOrEqual(Double.valueOf(dto.getStartTotalHours()));
                     cuttingCriteria.setTotalHours(filter);
                 }
                 if(dto.getEndTotalHours() != null) {
-                    filter.setLessThanOrEqual(dto.getEndTotalHours());
+                    filter.setLessThanOrEqual(Double.valueOf(dto.getEndTotalHours()));
                     cuttingCriteria.setTotalHours(filter);
                 }
             }

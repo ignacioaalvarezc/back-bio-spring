@@ -18,9 +18,12 @@ public interface SanitizedBoxService {
 
     List<SanitizedBox> searchByResponsibleName(String name);
 
-    List<SanitizedBox> getEnabledSanitizedBoxes();
+
+    List<SanitizedBox> findByState(String state);
 
     void saveAll(List<SanitizedBox> sanitizedBoxes);
 
     void updateAll(List<Long> ids, List<SanitizedBox> sanitizedBoxes);
+
+    List<SanitizedBox> getAllSanitizedBoxesBySanitizedId(Long sanitizedId);
 }

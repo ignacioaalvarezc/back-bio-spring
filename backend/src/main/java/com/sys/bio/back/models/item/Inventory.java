@@ -1,12 +1,13 @@
 package com.sys.bio.back.models.item;
 
+import com.sys.bio.back.models.enums.StoreMovement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -16,12 +17,14 @@ import java.util.Date;
 public class Inventory {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long inventoryId;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Item item;
-    private Boolean type;
+    private Product product;
     private Integer amount;
-    private Date date;
+    @Enumerated(EnumType.STRING)
+    private StoreMovement movement;
+    private LocalDate date;
     private LocalTime hour;
 }

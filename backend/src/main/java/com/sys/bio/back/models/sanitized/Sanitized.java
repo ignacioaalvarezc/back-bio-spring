@@ -9,7 +9,6 @@ import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -35,6 +34,12 @@ public class Sanitized {
     private Integer totalHours;
 
     private String observations;
+
+    private String state;
+    private String stateBoxes;
+
+    private LocalTime startTime;
+    private LocalTime endTime;
 
     @OneToMany(mappedBy = "sanitized", cascade = CascadeType.ALL)
     @JsonIgnore

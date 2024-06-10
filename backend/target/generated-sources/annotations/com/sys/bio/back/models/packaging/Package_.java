@@ -25,6 +25,7 @@ public abstract class Package_ {
 	public static volatile SingularAttribute<Package, Provider> provider;
 	public static volatile SingularAttribute<Package, Responsible> responsible;
 	public static volatile SingularAttribute<Package, BoxName> boxName;
+	public static volatile SingularAttribute<Package, String> state;
 	public static volatile SingularAttribute<Package, Integer> boxAmount;
 
 	public static final String DATE = "date";
@@ -40,6 +41,7 @@ public abstract class Package_ {
 	public static final String PROVIDER = "provider";
 	public static final String RESPONSIBLE = "responsible";
 	public static final String BOX_NAME = "boxName";
+	public static final String STATE = "state";
 	public static final String BOX_AMOUNT = "boxAmount";
 
 }

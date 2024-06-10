@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/items")
@@ -55,5 +56,10 @@ public class ItemController {
     @DeleteMapping("/{itemId}")
     public void deleteItem(@PathVariable("itemId") Long itemId) {
         itemService.deleteItem(itemId);
+    }
+
+    @PutMapping("/{itemId}/amount")
+    public Item updateCurrentAmount(@PathVariable Long itemId, @RequestBody Map<String, Integer> payload) {
+        return itemService.updateCurrentAmount(itemId, payload.get("amount"));
     }
 }

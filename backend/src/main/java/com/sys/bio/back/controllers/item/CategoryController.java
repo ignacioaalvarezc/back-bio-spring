@@ -2,7 +2,6 @@ package com.sys.bio.back.controllers.item;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.item.Category;
-import com.sys.bio.back.models.item.Inventory;
 import com.sys.bio.back.services.item.CategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

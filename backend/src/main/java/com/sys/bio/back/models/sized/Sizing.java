@@ -37,8 +37,12 @@ public class Sizing {
     private Integer totalAmount;
     private Integer totalHours;
     private String observations;
+    private String state;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
     @OneToMany(mappedBy = "sizing", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<SizedBox> sizedBoxes = new LinkedHashSet<>();
+
 }

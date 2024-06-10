@@ -30,8 +30,10 @@ public class Packaging {
     private LocalTime startTime;
     private LocalTime endTime;
     private Double totalHours;
-    private Integer totalBox;
+    private Integer totalBoxes;
     private Integer totalAmount;
+    private String observations;
+    private String state;
 
     @OneToMany(mappedBy = "packaging", cascade = CascadeType.ALL)
     @JsonIgnore

@@ -2,6 +2,7 @@ package com.sys.bio.back.models.packaging;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sys.bio.back.models.item.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,6 +31,10 @@ public class BoxFormat {
     @OneToMany(mappedBy = "boxFormat", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Package> packages = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "boxFormat", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Product> products = new LinkedHashSet<>();
 
 
 

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -24,6 +25,9 @@ public class SanitizedBoxController {
     private final SanitizedBoxService boxService;
 
     @Autowired
+    private SimpMessagingTemplate template;
+
+    @Autowired
     public SanitizedBoxController(SanitizedBoxService boxService) {
         this.boxService = boxService;
     }
@@ -33,7 +37,11 @@ public class SanitizedBoxController {
 
     @PostMapping("/")
     public ResponseEntity<SanitizedBox> saveSanitizedBox(@RequestBody SanitizedBox sanitizedBox) {
-        return ResponseEntity.ok(boxService.addSanitizedBox(sanitizedBox));
+        SanitizedBox savedSanitizedBox = boxService.addSanitizedBox(sanitizedBox);
+        if ("HUMEDO".equals(savedSanitizedBox.getState())) {
+            template.convertAndSend("/topic/notifications", "Hay un sanitizado pendiente");
+        }
+        return new ResponseEntity<>(savedSanitizedBox, HttpStatus.CREATED);
     }
 /*
     @PutMapping("/update/{sanitatedBasketId}")
@@ -90,11 +98,6 @@ public class SanitizedBoxController {
         return new ResponseEntity<>(sanitizedBoxes, HttpStatus.OK);
     }
 
-    @GetMapping("/enabled")
-    public List<SanitizedBox> listEnabledSanitizedBoxes() {
-        return boxService.getEnabledSanitizedBoxes();
-    }
-
     @PostMapping("/saveAll")
     public ResponseEntity<?> saveAllSanitizedBoxes(@RequestBody List<SanitizedBox> sanitizedBoxes) {
         try {
@@ -118,5 +121,10 @@ public class SanitizedBoxController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error updating sized boxes: " + e.getMessage());
         }
+    }
+
+    @GetMapping("/sanitized/{sanitizedId}")
+    public List<SanitizedBox> getSanitizedBoxesBySanitizedId(@PathVariable Long sanitizedId) {
+        return boxService.getAllSanitizedBoxesBySanitizedId(sanitizedId);
     }
 }
