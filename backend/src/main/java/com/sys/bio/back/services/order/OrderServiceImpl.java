@@ -2,6 +2,7 @@ package com.sys.bio.back.services.order;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.order.Order;
+import com.sys.bio.back.models.order.OrderProduct;
 import com.sys.bio.back.repositories.order.OrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,8 +18,14 @@ public class OrderServiceImpl implements OrderService{
     private OrderRepository orderRepo;
 
     private static final Logger log = LoggerFactory.getLogger(AuthenticationController.class);
+
     @Override
-    public Order addOrder(Order order) {
+    public Order createOrder(List<OrderProduct> orderProducts) {
+        Order order = new Order();
+        order.setOrderProducts(new HashSet<>(orderProducts));
+        for (OrderProduct item : orderProducts) {
+            item.setOrder(order);
+        }
         return orderRepo.save(order);
     }
     @Override
@@ -49,8 +56,5 @@ public class OrderServiceImpl implements OrderService{
     }
 
 
-    @Override
-    public int getUnprocessedOrdersCount() {
-        return orderRepo.countByEnabledFalse();
-    }
+
 }

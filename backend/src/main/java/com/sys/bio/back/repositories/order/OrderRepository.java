@@ -10,5 +10,4 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     List<Order> findByPickUpDateBetween(Date startDate, Date endDate);
 
-    int countByEnabledFalse();
 }

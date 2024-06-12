@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -21,13 +22,14 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
     private Long orderNumber;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private BoxType boxType;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<OrderProduct> orderProducts;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date pickUpDate;
-    private LocalTime pickUpHour;
-    private Integer packagesNumber;
-    private Integer strawsNumber;
+
     private String  indications;
-    private boolean enabled;
+
+    private String state;
 }

@@ -2,6 +2,7 @@ package com.sys.bio.back.controllers.order;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.order.Order;
+import com.sys.bio.back.models.order.OrderProduct;
 import com.sys.bio.back.services.order.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +28,8 @@ public class OrderController {
 
 
     @PostMapping("/")
-    public ResponseEntity<Order> saveOrder(@RequestBody Order order) {
-        return ResponseEntity.ok(orderService.addOrder(order));
+    public Order createOrder(@RequestBody List<OrderProduct> orderProducts) {
+        return orderService.createOrder(orderProducts);
     }
 
     @PutMapping("/update/{orderId}")
@@ -69,8 +70,5 @@ public class OrderController {
         return new ResponseEntity<>(filteredOrders, HttpStatus.OK);
     }
 
-    @GetMapping("/count")
-    public int getUnprocessedOrdersCount() {
-        return orderService.getUnprocessedOrdersCount();
-    }
+
 }

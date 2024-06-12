@@ -12,7 +12,10 @@ public interface OrderProductService {
     Set<OrderProduct> getOrderProducts();
     OrderProduct getOrderProduct(Long orderProductId);
     void deleteOrderProduct(Long orderProductId);
+    /*
     void toggleOrderProductStatus(Long orderProductId, boolean newStatus);
+
+     */
 
     List<OrderProduct> findAll();
 }

@@ -25,8 +25,6 @@ public class BoxType {
     private Long boxTypeId;
 
     private String description;
-    @OneToMany(mappedBy = "boxType", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Set<Order> orders = new LinkedHashSet<>();
+
 
 }

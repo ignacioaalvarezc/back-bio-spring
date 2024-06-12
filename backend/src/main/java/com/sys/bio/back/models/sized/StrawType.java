@@ -1,6 +1,7 @@
 package com.sys.bio.back.models.sized;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sys.bio.back.models.sanitized.SanitizedBox;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,10 @@ public class StrawType {
     @OneToMany(mappedBy = "strawType", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<SizedBox> sizedBoxes = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "strawType", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<SanitizedBox> sanitizedBoxes = new LinkedHashSet<>();
 
     public StrawType(String name) { this.name = name; }
 

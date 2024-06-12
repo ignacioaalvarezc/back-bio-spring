@@ -60,14 +60,6 @@ public class OrderProductController {
         orderProductService.deleteOrderProduct(orderProductId);
     }
 
-    @PutMapping("/toggle-status/{orderProductId}")
-    public ResponseEntity<String> toggleOrderProductStatus(@PathVariable("orderProductId") Long orderProductId,
-                                                        @RequestBody Map<String, Boolean> statusMap) {
-        boolean newStatus = statusMap.get("enabled");
-        orderProductService.toggleOrderProductStatus(orderProductId, newStatus);
-        return ResponseEntity.ok("Estado del producto de orden ha sido cambiado exitosamente");
-    }
-
     @GetMapping("/list")
     public ResponseEntity<List<OrderProduct>> list() {
         List<OrderProduct> list = orderProductService.findAll();

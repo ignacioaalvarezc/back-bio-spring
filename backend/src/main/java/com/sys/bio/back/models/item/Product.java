@@ -1,6 +1,7 @@
 package com.sys.bio.back.models.item;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sys.bio.back.models.order.OrderProduct;
 import com.sys.bio.back.models.packaging.BoxFormat;
 import com.sys.bio.back.models.packaging.BoxName;
 import com.sys.bio.back.models.packaging.Provider;
@@ -23,6 +24,12 @@ public class Product {
 
     @Id
     private Long productId;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<OrderProduct> orderProducts;
+
+    private String name;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private Provider provider;
     @ManyToOne(fetch = FetchType.EAGER)

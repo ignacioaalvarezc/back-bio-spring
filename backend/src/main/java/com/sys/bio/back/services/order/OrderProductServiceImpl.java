@@ -42,7 +42,7 @@ public class OrderProductServiceImpl implements OrderProductService {
         orderProduct.setOrderProductId(orderProductId);
         orderProductRepo.delete(orderProduct);
     }
-
+/*
     @Override
     public void toggleOrderProductStatus(Long orderProductId, boolean newStatus) {
         OrderProduct orderProduct = orderProductRepo.findById(orderProductId).orElse(null);
@@ -51,6 +51,7 @@ public class OrderProductServiceImpl implements OrderProductService {
             orderProductRepo.save(orderProduct);
         }
     }
+    */
 
     @Override
     public List<OrderProduct> findAll() {

@@ -1,6 +1,7 @@
 package com.sys.bio.back.models.order;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sys.bio.back.models.item.Product;
 import com.sys.bio.back.models.order.Order;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +21,12 @@ public class OrderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderProductId;
-    private String name;
-    private String provider;
-    private String format;
-    private Integer strawAmount;
-    private String description;
-    private Boolean enabled;
+
+    @ManyToOne
+    private Order order;
+
+    @ManyToOne
+    private Product product;
+
+    private Integer quantity;
 }
