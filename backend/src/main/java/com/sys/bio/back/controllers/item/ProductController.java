@@ -59,8 +59,18 @@ public class ProductController {
         productService.deleteProduct(productId);
     }
 
-    @PutMapping("/{productId}/amount")
-    public Product updateCurrentAmount(@PathVariable Long productId, @RequestBody Map<String, Integer> payload) {
-        return productService.updateCurrentAmount(productId, payload.get("amount"));
+    @PutMapping("/update-amount")
+    public ResponseEntity<Void> updateCurrentAmount(
+            @RequestParam Long providerId,
+            @RequestParam Long boxNameId,
+            @RequestParam Long boxFormatId,
+            @RequestParam int amount) {
+        productService.updateCurrentAmount(providerId, boxNameId, boxFormatId, amount);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/id")
+    public Long getProductId(@RequestParam Long providerId, @RequestParam Long boxNameId, @RequestParam Long boxFormatId) {
+        return productService.getProductId(providerId, boxNameId, boxFormatId);
     }
 }

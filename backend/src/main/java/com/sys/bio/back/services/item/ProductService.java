@@ -5,6 +5,7 @@ import com.sys.bio.back.models.item.Inventory;
 import com.sys.bio.back.models.item.Item;
 import com.sys.bio.back.models.item.Product;
 import com.sys.bio.back.models.item.Store;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -29,4 +30,9 @@ public interface ProductService {
     Product getProduct(Long productId);
 
     void deleteProduct(Long productId);
+
+    @Transactional
+    void updateCurrentAmount(Long providerId, Long boxNameId, Long boxFormatId, int amount);
+
+    Long getProductId(Long providerId, Long boxNameId, Long boxFormatId);
 }

@@ -1,5 +1,6 @@
 package com.sys.bio.back.models.item;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sys.bio.back.models.packaging.BoxFormat;
 import com.sys.bio.back.models.packaging.BoxName;
 import com.sys.bio.back.models.packaging.Provider;
@@ -9,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -20,7 +23,6 @@ public class Product {
 
     @Id
     private Long productId;
-
     @ManyToOne(fetch = FetchType.EAGER)
     private Provider provider;
     @ManyToOne(fetch = FetchType.EAGER)
@@ -30,6 +32,12 @@ public class Product {
 
     private Integer strawAmount;
     private Integer currentAmount;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Inventory> inventories = new LinkedHashSet<>();
+
+
 
 
 }
