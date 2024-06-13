@@ -21,6 +21,7 @@ public abstract class CutBox_ {
 	public static volatile SingularAttribute<CutBox, Responsible> responsible;
 	public static volatile SingularAttribute<CutBox, Cutting> cutting;
 	public static volatile SingularAttribute<CutBox, Double> weight;
+	public static volatile SingularAttribute<CutBox, String> state;
 
 	public static final String DATE = "date";
 	public static final String FILTER_DATE = "filterDate";
@@ -31,6 +32,7 @@ public abstract class CutBox_ {
 	public static final String RESPONSIBLE = "responsible";
 	public static final String CUTTING = "cutting";
 	public static final String WEIGHT = "weight";
+	public static final String STATE = "state";
 
 }
 

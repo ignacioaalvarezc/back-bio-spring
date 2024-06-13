@@ -42,4 +42,6 @@ public class CutBox {
     private LocalTime hour;
     private LocalDate filterDate;
 
+    private String state;
+
 }
