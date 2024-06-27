@@ -1,6 +1,7 @@
 package com.sys.bio.back.controllers.packaging;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
+import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.packaging.Package;
 import com.sys.bio.back.services.packaging.PackageService;
 import org.slf4j.Logger;
@@ -58,6 +59,12 @@ public class PackageController {
     @DeleteMapping("/{packageId}")
     public void deletePackage(@PathVariable("packageId") Long packageId) {
         packService.deletePackage(packageId);
+    }
+
+    @GetMapping("/byPackaging/{packagingId}")
+    public ResponseEntity<List<Package>> getPackagesByPackagingId(@PathVariable Long packagingId) {
+        List<Package> packages = packService.getPackagesByPackagingId(packagingId);
+        return new ResponseEntity<>(packages, HttpStatus.OK);
     }
 
 

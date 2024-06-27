@@ -22,7 +22,6 @@ import java.util.Date;
 public class CutBox {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cutBoxId;
 
     @ManyToOne(fetch = FetchType.EAGER)

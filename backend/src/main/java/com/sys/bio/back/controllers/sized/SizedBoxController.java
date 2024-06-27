@@ -104,6 +104,12 @@ public class SizedBoxController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid JSON format: " + ex.getMessage());
     }
 
+    @GetMapping("/bySizing/{sizingId}")
+    public ResponseEntity<List<SizedBox>> getSizedBoxesBySizingId(@PathVariable Long sizingId) {
+        List<SizedBox> sizedBoxes = boxService.getSizedBoxesBySizingId(sizingId);
+        return new ResponseEntity<>(sizedBoxes, HttpStatus.OK);
+    }
+
     @PostMapping("/lists")
     public ResponseEntity<List<SizedBox>> list(@RequestBody SearchSizedBoxDTO searchDTO) {
         SizedBoxCriteria sizedBoxCriteria = createCriteria(searchDTO);

@@ -28,4 +28,6 @@ public interface CutBoxService {
     Integer getTotalAmountForBiggyCuts();
 
     Integer getTotalAmountByCutType(String name);
+
+    List<CutBox> getCutBoxesByCuttingId(Long cuttingId);
 }

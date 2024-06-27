@@ -120,6 +120,13 @@ public class CutBoxController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid JSON format: " + ex.getMessage());
     }
 
+
+    @GetMapping("/byCutting/{cuttingId}")
+    public ResponseEntity<List<CutBox>> getCutBoxesByCuttingId(@PathVariable Long cuttingId) {
+        List<CutBox> cutBoxes = boxService.getCutBoxesByCuttingId(cuttingId);
+        return new ResponseEntity<>(cutBoxes, HttpStatus.OK);
+    }
+
     @PostMapping("/exportPdf")
     public void exportCutBoxListToPdf(@RequestBody List<CutBox> filteredCutBoxes, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf");

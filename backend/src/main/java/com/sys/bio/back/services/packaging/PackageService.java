@@ -19,4 +19,6 @@ public interface PackageService {
     List<Package> searchByResponsibleName(String name);
 
     void saveAll(List<Package> packages);
+
+    List<Package> getPackagesByPackagingId(Long packagingId);
 }

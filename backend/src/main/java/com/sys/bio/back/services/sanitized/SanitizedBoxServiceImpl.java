@@ -101,7 +101,7 @@ public class SanitizedBoxServiceImpl implements SanitizedBoxService {
     }
 
     @Override
-    public List<SanitizedBox> getAllSanitizedBoxesBySanitizedId(Long sanitizedId) {
+    public List<SanitizedBox> getSanitizedBoxesBySanitizedId(Long sanitizedId) {
         return boxRepo.findBySanitizedSanitizedId(sanitizedId);
     }
 }

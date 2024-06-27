@@ -117,4 +117,9 @@ public class CutBoxServiceImplements implements CutBoxService {
         return (Integer) query.getSingleResult();
     }
 
+    @Override
+    public List<CutBox> getCutBoxesByCuttingId(Long cuttingId) {
+        return boxRepo.findByCuttingCuttingId(cuttingId);
+    }
+
 }

@@ -20,4 +20,6 @@ public interface SizedBoxService {
     List<SizedBox> searchByResponsibleName(String name);
 
     void saveAll(List<SizedBox> sizedBoxes);
+
+    List<SizedBox> getSizedBoxesBySizingId(Long sizingId);
 }

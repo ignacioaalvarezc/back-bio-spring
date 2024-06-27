@@ -21,7 +21,6 @@ import java.util.Date;
 public class SizedBox {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sizedBoxId;
 
     @ManyToOne(fetch = FetchType.EAGER)

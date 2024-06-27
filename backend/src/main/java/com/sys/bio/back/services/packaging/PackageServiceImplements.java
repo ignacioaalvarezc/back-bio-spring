@@ -80,4 +80,9 @@ public class PackageServiceImplements implements PackageService {
     }
 
 
+    @Override
+    public List<Package> getPackagesByPackagingId(Long packagingId) {
+        return packRepo.findByPackagingPackagingId(packagingId);
+    }
+
 }

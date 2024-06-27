@@ -20,6 +20,8 @@ public interface CutBoxRepository extends JpaRepository<CutBox, Long>,
 
     List<CutBox> findByCutTypeNameContainingIgnoreCase(String name);
 
+    List<CutBox> findByCuttingCuttingId(Long cuttingId);
+
     @Query("SELECT SUM(c.amount) FROM CutBox c WHERE c.cutType.name = 'Mini'")
     Integer getTotalAmountForMiniCuts(Date currentDate);
 

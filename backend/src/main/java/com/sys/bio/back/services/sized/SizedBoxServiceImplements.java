@@ -1,9 +1,7 @@
 package com.sys.bio.back.services.sized;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.sized.SizedBox;
-import com.sys.bio.back.repositories.cutting.CutBoxRepository;
 import com.sys.bio.back.repositories.sized.SizedBoxRepository;
 import com.sys.bio.back.utils.date.DateUtils;
 import org.slf4j.Logger;
@@ -85,5 +83,10 @@ public class SizedBoxServiceImplements implements SizedBoxService {
         boxRepo.saveAll(sizedBoxes);
     }
 
+
+    @Override
+    public List<SizedBox> getSizedBoxesBySizingId(Long sizingId) {
+        return boxRepo.findBySizingSizingId(sizingId);
+    }
 
 }

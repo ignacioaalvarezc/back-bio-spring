@@ -21,7 +21,6 @@ import java.util.Date;
 public class SanitizedBox {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sanitizedBoxId;
 
     private Integer numberBox;

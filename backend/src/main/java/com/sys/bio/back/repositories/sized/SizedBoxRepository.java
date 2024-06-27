@@ -1,5 +1,6 @@
 package com.sys.bio.back.repositories.sized;
 
+import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.sized.SizedBox;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -16,6 +17,8 @@ public interface SizedBoxRepository extends JpaRepository<SizedBox, Long>,
     List<SizedBox> findByDateBetween(Date startDate, Date endDate);
 
     List<SizedBox> findByResponsibleNameContainingIgnoreCase(String name);
+
+    List<SizedBox> findBySizingSizingId(Long sizingId);
 
 
 }

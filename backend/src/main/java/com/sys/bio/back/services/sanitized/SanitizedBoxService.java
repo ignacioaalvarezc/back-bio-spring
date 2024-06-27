@@ -25,5 +25,5 @@ public interface SanitizedBoxService {
 
     void updateAll(List<Long> ids, List<SanitizedBox> sanitizedBoxes);
 
-    List<SanitizedBox> getAllSanitizedBoxesBySanitizedId(Long sanitizedId);
+    List<SanitizedBox> getSanitizedBoxesBySanitizedId(Long sanitizedId);
 }

@@ -1,6 +1,7 @@
 package com.sys.bio.back.controllers.sanitized;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
+import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.sanitized.SanitizedBox;
 import com.sys.bio.back.models.sanitized.UpdateRequest;
 import com.sys.bio.back.services.sanitized.SanitizedBoxService;
@@ -125,6 +126,12 @@ public class SanitizedBoxController {
 
     @GetMapping("/sanitized/{sanitizedId}")
     public List<SanitizedBox> getSanitizedBoxesBySanitizedId(@PathVariable Long sanitizedId) {
-        return boxService.getAllSanitizedBoxesBySanitizedId(sanitizedId);
+        return boxService.getSanitizedBoxesBySanitizedId(sanitizedId);
+    }
+
+    @GetMapping("/bySanitized/{sanitizedId}")
+    public ResponseEntity<List<SanitizedBox>> getSanitizedBoxesBySanitizedForVisual(@PathVariable Long sanitizedId) {
+        List<SanitizedBox> sanitizedBoxes = boxService.getSanitizedBoxesBySanitizedId(sanitizedId);
+        return new ResponseEntity<>(sanitizedBoxes, HttpStatus.OK);
     }
 }
