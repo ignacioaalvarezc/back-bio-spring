@@ -16,6 +16,7 @@ public abstract class Product_ {
 	public static volatile SingularAttribute<Product, Long> productId;
 	public static volatile SingularAttribute<Product, Provider> provider;
 	public static volatile SetAttribute<Product, Inventory> inventories;
+	public static volatile SingularAttribute<Product, Integer> price;
 	public static volatile SingularAttribute<Product, BoxFormat> boxFormat;
 	public static volatile SetAttribute<Product, OrderProduct> orderProducts;
 	public static volatile SingularAttribute<Product, String> name;
@@ -26,6 +27,7 @@ public abstract class Product_ {
 	public static final String PRODUCT_ID = "productId";
 	public static final String PROVIDER = "provider";
 	public static final String INVENTORIES = "inventories";
+	public static final String PRICE = "price";
 	public static final String BOX_FORMAT = "boxFormat";
 	public static final String ORDER_PRODUCTS = "orderProducts";
 	public static final String NAME = "name";

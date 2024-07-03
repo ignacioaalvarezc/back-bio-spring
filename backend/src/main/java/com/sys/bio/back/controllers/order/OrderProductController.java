@@ -1,7 +1,10 @@
 package com.sys.bio.back.controllers.order;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
+import com.sys.bio.back.models.cutting.CutBox;
+import com.sys.bio.back.models.order.Order;
 import com.sys.bio.back.models.order.OrderProduct;
+import com.sys.bio.back.models.packaging.Package;
 import com.sys.bio.back.services.order.OrderProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,5 +67,26 @@ public class OrderProductController {
     public ResponseEntity<List<OrderProduct>> list() {
         List<OrderProduct> list = orderProductService.findAll();
         return new ResponseEntity<List<OrderProduct>>(list, HttpStatus.OK);
+    }
+
+    @PostMapping("/saveAll")
+    public ResponseEntity<?> saveAllOrderProducts(@RequestBody List<OrderProduct> orderProducts) {
+        try {
+            orderProductService.saveAll(orderProducts);
+            return ResponseEntity.ok("Order Products has saved successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error saving order products: " + e.getMessage());
+        }
+    }
+
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ResponseEntity<?> handleHttpMessageNotReadableException(org.springframework.http.converter.HttpMessageNotReadableException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid JSON format: " + ex.getMessage());
+    }
+
+    @GetMapping("/byOrder/{orderId}")
+    public ResponseEntity<List<OrderProduct>> getOrderProductsByOrderId(@PathVariable Long orderId) {
+        List<OrderProduct> orderProducts = orderProductService.getOrderProductsByOrderId(orderId);
+        return new ResponseEntity<>(orderProducts, HttpStatus.OK);
     }
 }

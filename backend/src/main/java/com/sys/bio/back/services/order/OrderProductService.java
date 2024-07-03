@@ -18,4 +18,8 @@ public interface OrderProductService {
      */
 
     List<OrderProduct> findAll();
+
+    void saveAll(List<OrderProduct> orderProducts);
+
+    List<OrderProduct> getOrderProductsByOrderId(Long orderId);
 }

@@ -9,7 +9,7 @@ import java.util.Set;
 
 public interface OrderService {
 
-    Order createOrder(List<OrderProduct> orderProducts);
+    Order createOrder(Order order);
 
     Order updateOrder(Order order);
     Set<Order> getOrders();
@@ -17,4 +17,5 @@ public interface OrderService {
     void deleteOrder(Long orderId);
     List<Order> getOrdersByPickUpDateRange(Date startDate, Date endDate);
 
+    long getUnprocessedOrdersCount();
 }

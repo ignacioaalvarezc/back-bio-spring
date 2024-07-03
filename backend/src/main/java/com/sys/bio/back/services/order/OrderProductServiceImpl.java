@@ -58,5 +58,15 @@ public class OrderProductServiceImpl implements OrderProductService {
         return  orderProductRepo.findAll();
     }
 
+    @Override
+    public void saveAll(List<OrderProduct> orderProducts) {
+        orderProductRepo.saveAll(orderProducts);
+    }
+
+    @Override
+    public List<OrderProduct> getOrderProductsByOrderId(Long orderId) {
+        return orderProductRepo.findByOrderOrderId(orderId);
+    }
+
 
 }

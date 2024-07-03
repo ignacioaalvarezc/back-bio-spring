@@ -23,9 +23,11 @@ import java.util.Set;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<OrderProduct> orderProducts;
 
     private String name;
@@ -36,6 +38,8 @@ public class Product {
     private BoxName boxName;
     @ManyToOne(fetch = FetchType.EAGER)
     private BoxFormat boxFormat;
+
+    private Integer price;
 
     private Integer strawAmount;
     private Integer currentAmount;
