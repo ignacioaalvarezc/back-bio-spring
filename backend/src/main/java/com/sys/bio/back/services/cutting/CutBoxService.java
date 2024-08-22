@@ -23,9 +23,41 @@ public interface CutBoxService {
     void saveAll(List<CutBox> cutBoxes);
 
     Integer getTotalAmountForMiniCuts();
-
     Integer getTotalAmountForStandardCuts();
     Integer getTotalAmountForBiggyCuts();
+
+
+    Integer getTotalAmountForMiniCutsByCurrentMonth();
+    Integer getTotalAmountForStandardCutsByCurrentMonth();
+    Integer getTotalAmountForBiggyCutsByCurrentMonth();
+
+
+
+
+    Integer getTotalAmountForMiniCutsByPreviousMonth();
+    Integer getTotalAmountForStandardCutsByPreviousMonth();
+    Integer getTotalAmountForBiggyCutsByPreviousMonth();
+
+
+
+    Integer getTotalWeightForMiniCutsByCurrentMonth();
+    Integer getTotalWeightForStandardCutsByCurrentMonth();
+    Integer getTotalWeightForBiggyCutsByCurrentMonth();
+
+
+
+    Integer getTotalWeightForMiniCutsByPreviousMonth();
+    Integer getTotalWeightForStandardCutsByPreviousMonth();
+    Integer getTotalWeightForBiggyCutsByPreviousMonth();
+
+
+
+
+
+
+
+
+
 
     Integer getTotalAmountByCutType(String name);
 

@@ -68,6 +68,12 @@ public class ReceptionServiceImpl implements ReceptionService {
         }
     }
 
+    @Override
+    public List<Reception> getReceptionsByDate(LocalDate localDate) {
+        Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        return receptionRepository.findByDate(date);
+    }
+
 
     public List<Reception> getReceptionsByDateRange(Date startDate, Date endDate) {
         return receptionRepository.findByDateBetween(startDate, endDate);

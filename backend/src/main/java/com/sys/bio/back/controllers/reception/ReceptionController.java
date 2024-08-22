@@ -81,6 +81,11 @@ public class ReceptionController {
         receptionService.deleteReception(receptionId);
     }
 
+    @GetMapping("/today")
+    public List<Reception> getTodayReceptions() {
+        LocalDate today = LocalDate.now();
+        return receptionService.getReceptionsByDate(today);
+    }
 
     @GetMapping("/date-filter")
     public ResponseEntity<List<Reception>> getFilteredReceptions(

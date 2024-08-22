@@ -94,21 +94,91 @@ public class CutBoxServiceImplements implements CutBoxService {
         boxRepo.saveAll(cutBoxes);
     }
 
+
+
     @Override
     public Integer getTotalAmountForMiniCuts() {
-        Date currentDate = new Date();
-        return boxRepo.getTotalAmountForMiniCuts(currentDate);
+        return boxRepo.getTotalAmountForMiniCuts();
     }
-
     @Override
     public Integer getTotalAmountForStandardCuts() {
         return boxRepo.getTotalAmountForStandardCuts();
     }
-
     @Override
     public Integer getTotalAmountForBiggyCuts() {
         return boxRepo.getTotalAmountForBiggyCuts();
     }
+
+
+
+    @Override
+    public Integer getTotalAmountForMiniCutsByCurrentMonth() {
+        return boxRepo.getTotalAmountForMiniCutsByCurrentMonth();
+    }
+    @Override
+    public Integer getTotalAmountForStandardCutsByCurrentMonth() {
+        return boxRepo.getTotalAmountForStandardCutsByCurrentMonth();
+    }
+    @Override
+    public Integer getTotalAmountForBiggyCutsByCurrentMonth() {
+        return boxRepo.getTotalAmountForBiggyCutsByCurrentMonth();
+    }
+
+
+
+
+    @Override
+    public Integer getTotalAmountForMiniCutsByPreviousMonth() {
+        return boxRepo.getTotalAmountForMiniCutsByPreviousMonth();
+    }
+    @Override
+    public Integer getTotalAmountForStandardCutsByPreviousMonth() {
+        return boxRepo.getTotalAmountForStandardCutsByPreviousMonth();
+    }
+    @Override
+    public Integer getTotalAmountForBiggyCutsByPreviousMonth() {
+        return boxRepo.getTotalAmountForBiggyCutsByPreviousMonth();
+    }
+
+
+
+    @Override
+    public Integer getTotalWeightForMiniCutsByCurrentMonth() {
+        return boxRepo.getTotalWeightForMiniCutsByCurrentMonth();
+    }
+    @Override
+    public Integer getTotalWeightForStandardCutsByCurrentMonth() {
+        return boxRepo.getTotalWeightForStandardCutsByCurrentMonth();
+    }
+    @Override
+    public Integer getTotalWeightForBiggyCutsByCurrentMonth() {
+        return boxRepo.getTotalWeightForBiggyCutsByCurrentMonth();
+    }
+
+
+
+
+    @Override
+    public Integer getTotalWeightForMiniCutsByPreviousMonth() {
+        return boxRepo.getTotalWeightForMiniCutsByPreviousMonth();
+    }
+    @Override
+    public Integer getTotalWeightForStandardCutsByPreviousMonth() {
+        return boxRepo.getTotalWeightForStandardCutsByPreviousMonth();
+    }
+    @Override
+    public Integer getTotalWeightForBiggyCutsByPreviousMonth() {
+        return boxRepo.getTotalWeightForBiggyCutsByPreviousMonth();
+    }
+
+
+
+
+
+
+
+
+
 
     public Integer getTotalAmountByCutType(String name) {
         Query query = entityManager.createQuery(

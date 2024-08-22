@@ -214,22 +214,113 @@ public class CutBoxController {
 
     @GetMapping("/totalAmountForMiniCuts")
     public Integer getTotalAmountForMiniCuts() {
-        return boxService.getTotalAmountForMiniCuts();
+        Integer total = boxService.getTotalAmountForMiniCuts();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
     }
-
     @GetMapping("/totalAmountForStandardCuts")
     public Integer getTotalAmountForStandardCuts() {
         Integer total = boxService.getTotalAmountForStandardCuts();
         System.out.println("Valor total obtenido desde el servicio: " + total);
         return total;
     }
-
     @GetMapping("/totalAmountForBiggyCuts")
     public Integer getTotalAmountForBiggyCuts() {
         Integer total = boxService.getTotalAmountForBiggyCuts();
         System.out.println("Valor total obtenido desde el servicio: " + total);
         return total;
     }
+
+
+
+    @GetMapping("/totalAmountForMiniCutsByCurrentMonth")
+    public Integer getTotalAmountForMiniCutsByCurrentMonth() {
+        Integer total = boxService.getTotalAmountForMiniCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+    @GetMapping("/totalAmountForStandardCutsByCurrentMonth")
+    public Integer getTotalAmountForStandardCutsByCurrentMonth() {
+        Integer total = boxService.getTotalAmountForStandardCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+    @GetMapping("/totalAmountForBiggyCutsByCurrentMonth")
+    public Integer getTotalAmountForBiggyCutsByCurrentMonth() {
+        Integer total = boxService.getTotalAmountForBiggyCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+
+
+
+    @GetMapping("totalAmountForMiniCutsByPreviousMonth")
+    public Integer getTotalAmountForMiniCutsByPreviousMonth() {
+        Integer total = boxService.getTotalAmountForMiniCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+    @GetMapping("totalAmountForStandardCutsByPreviousMonth")
+    public Integer getTotalAmountForStandardCutsByPreviousMonth() {
+        Integer total = boxService.getTotalAmountForStandardCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+    @GetMapping("totalAmountForBiggyCutsByPreviousMonth")
+    public Integer getTotalAmountForBiggyCutsByPreviousMonth() {
+        Integer total = boxService.getTotalAmountForBiggyCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+
+
+    @GetMapping("/totalWeightForMiniCutsByCurrentMonth")
+    public Integer getTotalWeightForMiniCutsByCurrentMonth() {
+        Integer total = boxService.getTotalWeightForMiniCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+    @GetMapping("/totalWeightForStandardCutsByCurrentMonth")
+    public Integer getTotalWeightForStandardCutsByCurrentMonth() {
+        Integer total = boxService.getTotalWeightForStandardCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+    @GetMapping("/totalWeightForBiggyCutsByCurrentMonth")
+    public Integer getTotalWeightForBiggyCutsByCurrentMonth() {
+        Integer total = boxService.getTotalWeightForBiggyCutsByCurrentMonth();
+        System.out.println("Valor total obtenido desde el servicio: " + total);
+        return total;
+    }
+
+    @GetMapping("totalWeightForMiniCutsByPreviousMonth")
+    public Integer getTotalWeightForMiniCutsByPreviousMonth() {
+        Integer total = boxService.getTotalWeightForMiniCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+    @GetMapping("totalWeightForStandardCutsByPreviousMonth")
+    public Integer getTotalWeightForStandardCutsByPreviousMonth() {
+        Integer total = boxService.getTotalWeightForStandardCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+    @GetMapping("totalWeightForBiggyCutsByPreviousMonth")
+    public Integer getTotalWeightForBiggyCutsByPreviousMonth() {
+        Integer total = boxService.getTotalWeightForBiggyCutsByPreviousMonth();
+        System.out.println("Valor total obtenido desde el servicio para el mes anterior: " + total);
+        return total;
+    }
+
+
+
+
+
+
+
+
+
+
 
     @GetMapping("/totalAmountByCutType/{name}")
     public Integer getTotalAmountByCutType(@PathVariable String name) {

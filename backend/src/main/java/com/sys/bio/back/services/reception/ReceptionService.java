@@ -28,6 +28,7 @@ public interface ReceptionService {
 
     List<Reception> searchByResponsibleName(String name);
 
+    List<Reception> getReceptionsByDate(LocalDate localDate);
     /*
     Map<String, Double> getTotalHoursByResponsibleForCurrentMonth();
 

@@ -2,6 +2,7 @@ package com.sys.bio.back.repositories.reception;
 
 import com.sys.bio.back.models.dto.OperatorTotalBalesDTO;
 import com.sys.bio.back.models.reception.Reception;
+import net.bytebuddy.asm.Advice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
@@ -16,6 +17,9 @@ public interface ReceptionRepository extends JpaRepository<Reception, Long>,
 
     @Query("SELECT r.receptionId FROM Reception r")
     List<Long> findAllIds();
+
+    @Query("SELECT r FROM Reception r WHERE DATE(r.date) = DATE(:date)")
+    List<Reception> findByDate(@Param("date") Date date);
 
     List<Reception> findByDateBetween(Date startDate, Date endDate);
     
